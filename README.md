@@ -12,8 +12,8 @@ This is 2D indie game implemented by using concept of Object Oriented Programmin
 
 This final project was developed for Chulalongkorn University's 2110215 PROGRAMMING METHODOLOGY I course by
 
-- Worralop Srichainont (@reisenx)
-- Sasarose Buranapin (@ssrose-b)
+- Worralop Srichainont ([@reisenx](https://github.com/reisenx))
+- Sasarose Buranapin ([@ssrose-b](https://github.com/ssrose-b))
 
 ### Game Development Details, [COMING SOON]()
 
