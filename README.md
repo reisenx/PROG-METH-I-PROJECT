@@ -46,7 +46,7 @@ Each stage in a game would have the interface like this.
 - Click **Start Game** to starts a game.
 - Click **Restart** to create a new board. This can be clicked after the game ends and during unsatisfied game.
 - **Left click** on a cell, to open it.
-- **Right click** on a cell, to flag a cell that suspicious to be a bomb.
+- **Right click** on a cell, to flag a cell that suspicious to be a bomb. After clicking, a red flag appears on a cell.
 - Each cell in a board has different effect when the player click on it.
 
 [INSERT IMAGE HERE]
