@@ -79,8 +79,8 @@ Each stage in a game would have the interface like this.
 
 <div align="center">
     <p>
-        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/WhiteNormal.png" height=45% width=45%>
-        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/YellowNormal.png" height=45% width=45%>
+        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/WhiteNormal.png" height=30% width=30%>
+        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/YellowNormal.png" height=30% width=30%>
     </p>
 </div>
 
@@ -113,12 +113,16 @@ Each stage in a game would have the interface like this.
 **Mystery cell** is a special cell, but it cannot do anything other than showing `?` to a player. It is more like degraded version of normal cell.
 
 <div align="center">
-    <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Mystery.png" height=45% width=45%>
+    <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Mystery.png" height=30% width=30%>
 </div>
 
 ---
 
 # Stage Overview
+
+Each stage of a game has different cell amount configuration as table below.
+
+Every time a player restart a game, the cells arrangement are random but the amount of cells are still the same.
 
 | Stage | Board Size | Bombs | Mystery | Shield | Defuser |
 | :---: | :--------: | :---: | :-----: | :----: | :-----: |
