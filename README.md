@@ -15,9 +15,13 @@ This final project was developed for Chulalongkorn University's 2110215 PROGRAMM
 - Worralop Srichainont ([@reisenx](https://github.com/reisenx))
 - Sasarose Buranapin ([@ssrose-b](https://github.com/ssrose-b))
 
-### Game Development Details, [COMING SOON]()
+<div align="center">
 
-[INSERT HOME IMAGE HERE]
+## Game Development Details, [COMING SOON]()
+
+<img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Home.png" height=80% width=80%>
+
+</div>
 
 ---
 
@@ -27,7 +31,12 @@ This final project was developed for Chulalongkorn University's 2110215 PROGRAMM
 
 MINDsweeper is a game where bombs are hidden in a board of cells. The objective of this game is to opening all of the safe cells. If the player clicks on a bomb without a shield, the player loses a game.
 
-[INSERT WIN/LOSES IMAGES HERE]
+<div align="center">
+    <p>
+        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Win.png" height=45% width=45%>
+        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Lose.png" height=45% width=45%>
+    </p>
+</div>
 
 ### How to play?
 
@@ -38,7 +47,12 @@ When the player opens a game, the shows up.
 3. **How to Play** navigates to tutorial game tutorial page.
 4. **Exit** simply close the game.
 
-[INSERT HOME PAGE HERE]
+<div align="center">
+    <p>
+        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Home.png" height=45% width=45%>
+        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Stage.png" height=45% width=45%>
+    </p>
+</div>
 
 Each stage in a game would have the interface like this.
 
@@ -49,7 +63,12 @@ Each stage in a game would have the interface like this.
 - **Right click** on a cell, to flag a cell that suspicious to be a bomb. After clicking, a red flag appears on a cell.
 - Each cell in a board has different effect when the player click on it.
 
-[INSERT IMAGE HERE]
+<div align="center">
+    <p>
+        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/LeftClick.png" height=45% width=45%>
+        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/RightClick.png" height=45% width=45%>
+    </p>
+</div>
 
 ### Normal Cell
 
@@ -58,31 +77,44 @@ Each stage in a game would have the interface like this.
 - **White Normal cell:** a number only indicates amount of adjacent bombs. (Has no special cells adjacent to this cell.)
 - **Yellow Normal cell:** a number indicates amount of adjacent bombs and special cells. (Has special cells adjacent to this cell.)
 
-[INSERT IMAGE HERE]
+<div align="center">
+    <p>
+        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/WhiteNormal.png" height=45% width=45%>
+        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/YellowNormal.png" height=45% width=45%>
+    </p>
+</div>
 
 ### Bomb Cell
 
 **Bomb cell** is dangerous. If the player clicks on this cell without a shield, they immediately loses a game.
 
-[INSERT IMAGE HERE]
+<div align="center">
+    <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Lose.png" height=60% width=60%>
+</div>
 
 ### Shield Cell
 
 **Shield cell** is a special cell that gives the player a shield which can protect player from a bomb explosion once.
 
-[INSERT IMAGE HERE]
+<div align="center">
+    <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Shield.png" height=60% width=60%>
+</div>
 
 ### Defuser Cell
 
 **Defuser cell** is a special cell that automatically flags 3 bombs randomly.
 
-[INSERT IMAGE HERE]
+<div align="center">
+    <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Defuser.png" height=60% width=60%>
+</div>
 
 ### Mystery Cell
 
 **Mystery cell** is a special cell, but it cannot do anything other than showing `?` to a player. It is more like degraded version of normal cell.
 
-[INSERT IMAGE HERE]
+<div align="center">
+    <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Mystery.png" height=60% width=60%>
+</div>
 
 ---
 
@@ -100,4 +132,10 @@ Each stage in a game would have the interface like this.
 |   8   |  25 × 25   |  120  |   20    |   3    |    0    |
 |   9   |  25 × 25   |  120  |   23    |   0    |    0    |
 
-[INSERT IMAGE HERE]
+<div align="center">
+    <p>
+        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Small.png" height=30% width=30%>
+        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Medium.png" height=30% width=30%>
+        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Large.png" height=30% width=30%>
+    </p>
+</div>
