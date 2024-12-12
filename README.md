@@ -4,7 +4,7 @@
 
 ---
 
-## Introduction
+# Introduction
 
 MINDsweeper takes inspiration on the classic Minesweeper game, but it has extra twists and a more visual interface.
 
@@ -25,9 +25,9 @@ This final project was developed for Chulalongkorn University's 2110215 PROGRAMM
 
 ---
 
-## Game Overview
+# Game Overview
 
-### MINDsweeper Objective
+## MINDsweeper Objective
 
 MINDsweeper is a game where bombs are hidden in a board of cells. The objective of this game is to opening all of the safe cells. If the player clicks on a bomb without a shield, the player loses a game.
 
@@ -38,7 +38,7 @@ MINDsweeper is a game where bombs are hidden in a board of cells. The objective 
     </p>
 </div>
 
-### How to play?
+## How to play?
 
 When the player opens a game, the shows up.
 
@@ -70,7 +70,7 @@ Each stage in a game would have the interface like this.
     </p>
 </div>
 
-### Normal Cell
+## Normal Cell
 
 **Normal cell** is a cell that has a number indicates amount of adjacent bombs and special cells to itself. this type of cell has two variants.
 
@@ -84,7 +84,7 @@ Each stage in a game would have the interface like this.
     </p>
 </div>
 
-### Bomb Cell
+## Bomb Cell
 
 **Bomb cell** is dangerous. If the player clicks on this cell without a shield, they immediately loses a game.
 
@@ -92,7 +92,7 @@ Each stage in a game would have the interface like this.
     <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Lose.png" height=60% width=60%>
 </div>
 
-### Shield Cell
+## Shield Cell
 
 **Shield cell** is a special cell that gives the player a shield which can protect player from a bomb explosion once.
 
@@ -100,7 +100,7 @@ Each stage in a game would have the interface like this.
     <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Shield.png" height=60% width=60%>
 </div>
 
-### Defuser Cell
+## Defuser Cell
 
 **Defuser cell** is a special cell that automatically flags 3 bombs randomly.
 
@@ -108,7 +108,7 @@ Each stage in a game would have the interface like this.
     <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Defuser.png" height=60% width=60%>
 </div>
 
-### Mystery Cell
+## Mystery Cell
 
 **Mystery cell** is a special cell, but it cannot do anything other than showing `?` to a player. It is more like degraded version of normal cell.
 
@@ -118,7 +118,7 @@ Each stage in a game would have the interface like this.
 
 ---
 
-## Stage Overview
+# Stage Overview
 
 | Stage | Board Size | Bombs | Mystery | Shield | Defuser |
 | :---: | :--------: | :---: | :-----: | :----: | :-----: |
