@@ -113,7 +113,7 @@ Each stage in a game would have the interface like this.
 **Mystery cell** is a special cell, but it cannot do anything other than showing `?` to a player. It is more like degraded version of normal cell.
 
 <div align="center">
-    <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Mystery.png" height=60% width=60%>
+    <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Mystery.png" height=45% width=45%>
 </div>
 
 ---
@@ -131,11 +131,3 @@ Each stage in a game would have the interface like this.
 |   7   |  25 × 25   |  120  |    0    |   3    |    3    |
 |   8   |  25 × 25   |  120  |   20    |   3    |    0    |
 |   9   |  25 × 25   |  120  |   23    |   0    |    0    |
-
-<div align="center">
-    <p>
-        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Small.png" height=30% width=30%>
-        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Medium.png" height=30% width=30%>
-        <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Large.png" height=30% width=30%>
-    </p>
-</div>
