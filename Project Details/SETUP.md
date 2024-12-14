@@ -42,7 +42,7 @@ git clone https://github.com/2110215-ProgMeth/project-2024-term-1-steve.git
 > [!TIP]
 > If `git clone` is not working, you may haven't setup your GitHub configuration yet. Please setup your GitHub configuration first.
 >
-> [**>> How to setup GitHub configuration? <<**](https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/Others/GitClone.png)
+> [**>> How to setup GitHub configuration? <<**](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/Project%20Details/SETUP.md#github-configuration-git-config)
 
 ## Setup Java Project on Eclipse
 
@@ -63,11 +63,11 @@ This step is a little complicated, but it is necessary to setup this before star
 
 **Step 2:** Remove a tick on `Create module-info.java file` box, then click on `Configure JREs`.
 
-<img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/Others/NewProject.png" height=80% width=80%>
+<img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/Others/NewProject.png" height=60% width=60%>
 
 **Step 3:** Click on the installed Java Development Kit (JDK), then click `Duplicate`.
 
-<img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/Others/JRE01.png" height=80% width=80%>
+<img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/Others/JRE01.png" height=60% width=60%>
 
 > [!NOTE]
 > Java JDK 22 is recommended for this project.
@@ -86,19 +86,19 @@ For example.
 
 Here is what it should look like after finishing this step.
 
-<img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/Others/JRE02.png" height=80% width=80%>
+<img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/Others/JRE02.png" height=60% width=60%>
 
 **Step 5:** Add JavaFX JAR files to the JRE, by clicking on `Add External JARs`.
 
 Go to the JavaFX's `lib` folder, and add all of them.
 
-<img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/Others/JRE03.png" height=80% width=80%>
+<img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/Others/JRE03.png" height=60% width=60%>
 
-<img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/Others/JRE04.png" height=80% width=80%>
+<img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/Others/JRE04.png" height=60% width=60%>
 
 Make sure to select JRE to the one with JavaFX, then click `Apply and Close`.
 
-<img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/Others/JRE05.png" height=80% width=80%>
+<img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/Others/JRE05.png" height=60% width=60%>
 
 And now your Eclipse Java project setup is finally done!
 
@@ -185,6 +185,26 @@ The commit message can be anything. It is like a topic for the updates, for exam
 ```
 git commit -m "fix: image not showing"
 ```
+
+**Step 3:** Use `git push` to push the created commit to remote repository.
+
+Just simply use the command.
+
+```
+git push
+```
+
+If it doesn't work, please try another method first but If it is really not working, you can use this command.
+
+```
+git push origin main --force
+```
+
+> [!CAUTION]
+> Force push is not recommend, just use it as the last resort!
+
+> [!TIP]
+> I highly recommend for you to learn about `git branch` for more advanced coding project in the future.
 
 ### Pull Updates (`git pull`)
 
