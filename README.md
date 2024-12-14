@@ -15,9 +15,12 @@ This final project was developed for Chulalongkorn University's 2110215 PROGRAMM
 - Worralop Srichainont ([@reisenx](https://github.com/reisenx))
 - Sasarose Buranapin ([@ssrose-b](https://github.com/ssrose-b))
 
+> [!WARNING]
+> This repository is made for educational purpose only. It can be used as a source of inspiration but **DO NOT COPY THE ENTIRE PROJECT!!**
+
 <div align="center">
 
-## Game Development Details, [COMING SOON]()
+## Game Development Details, [>> CLICK HERE <<](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/Project%20Details/DEV.md)
 
 <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Home.png" height=80% width=80%>
 

@@ -4,15 +4,18 @@
 
 ---
 
+# Resources
+
+| Title                        | Description                                                                                                |     Link      |
+| :--------------------------- | :--------------------------------------------------------------------------------------------------------- | :-----------: |
+| **Game Overview**            | The main markdown file.                                                                                    | [README.md]() |
+| **Game Development Details** | It contains information about game development.                                                            |  [DEV.md]()   |
+| **Project Setup**            | A tutorial on how to setup a Java project on Eclipse, and how to use GitHub to collaborate with the teams. | [SETUP.md]()  |
+| **Project Documentation**    | All class and methods implementation in details.                                                           |  [DOCS.md]()  |
+
+---
+
 # Project Overview
-
-<div align="center">
-
-### Project Setup [>> CLICK HERE <<]()
-
-### Project Documentation [ >> CLICK HERE <<]()
-
-</div>
 
 This project is developed by 100% Java, written in Eclipse IDE and utilized JavaFX for Graphical User Interface (GUI).
 
@@ -56,12 +59,12 @@ This package is the core of the game. It mainly focuses on both game logic and g
 
 This package contains all of the GUI component of every page in a game.
 
-| Class                    | Description                                                                                                                                                                                                  |
-| :----------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`HomePane.java`]()      | This class construct home screen and its GUI components.                                                                                                                                                     |
-| [`HowToPlayPane.java`]() | This class construct game tutorial screen and its GUI components.                                                                                                                                            |
-| [`StagePane.java`]()     | This class construct stage selection screen and its GUI components.                                                                                                                                          |
-| [`GamePane.java`]()      | This class construct game board utilizing randomization method from `GameUtil.java`, creating its GUI components, and working with `GameController.java` to make the game working properly.                  |
-| [`ControlPane.java`]()   | This class construct game control screen showing at the right side of `GamePane.java`, creating its GUI components, and working with `GameController.java` to properly update game status on user interface. |
+| Class                                                                                                                    | Description                                                                                                                                                                                                  |
+| :----------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`HomePane.java`](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/MINDsweeper/src/pane/HomePane.java)           | This class construct home screen and its GUI components.                                                                                                                                                     |
+| [`HowToPlayPane.java`](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/MINDsweeper/src/pane/HowToPlayPane.java) | This class construct game tutorial screen and its GUI components.                                                                                                                                            |
+| [`StagePane.java`](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/MINDsweeper/src/pane/StagePane.java)         | This class construct stage selection screen and its GUI components.                                                                                                                                          |
+| [`GamePane.java`](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/MINDsweeper/src/pane/GamePane.java)           | This class construct game board utilizing randomization method from `GameUtil.java`, creating its GUI components, and working with `GameController.java` to make the game working properly.                  |
+| [`ControlPane.java`](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/MINDsweeper/src/pane/ControlPane.java)     | This class construct game control screen showing at the right side of `GamePane.java`, creating its GUI components, and working with `GameController.java` to properly update game status on user interface. |
 
 ---
