@@ -20,7 +20,7 @@ This final project was developed for Chulalongkorn University's 2110215 PROGRAMM
 
 <div align="center">
 
-## Game Development Details, [>> CLICK HERE <<](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/Project%20Details/DEV.md)
+## Game Development Details [>> CLICK HERE! <<](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/Project%20Details/DEV.md)
 
 <img src="https://raw.githubusercontent.com/reisenx/PROG-METH-I-PROJECT/refs/heads/main/Project%20Details/UI/Home.png" height=80% width=80%>
 
@@ -29,6 +29,14 @@ This final project was developed for Chulalongkorn University's 2110215 PROGRAMM
 ---
 
 # Game Overview
+
+## Project Presentation
+
+This is our 10-minute project presentation video, which is the requirement for this final project.
+
+**Presentation Video** [**>> CLICK HERE! <<**](https://youtu.be/95Oek8kd3Ic)
+
+It includes gameplay and the Object Oriented Programming (OOP) concept that was applied to this project. You can watch this to get inspiration for your own project.
 
 ## MINDsweeper Objective
 
@@ -125,7 +133,7 @@ Each stage in a game would have the interface like this.
 
 Each stage of a game has different cell amount configuration as table below.
 
-Every time a player restart a game, the cells arrangement are random but the amount of cells are still the same.
+Every time a player restarts a game, the cells arrangement are random but the amount of cells are still the same.
 
 | Stage | Board Size | Bombs | Mystery | Shield | Defuser |
 | :---: | :--------: | :---: | :-----: | :----: | :-----: |
