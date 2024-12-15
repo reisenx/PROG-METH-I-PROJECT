@@ -17,7 +17,7 @@
 
 # Project Overview
 
-This project is developed by 100% Java, written in Eclipse IDE and utilized JavaFX for Graphical User Interface (GUI).
+This project is developed by pure Java, written in Eclipse IDE and utilized JavaFX for Graphical User Interface (GUI).
 
 For project design, there are 4 packages and each package focuses on different roles in the project.
 
