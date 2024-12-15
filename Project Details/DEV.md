@@ -6,12 +6,12 @@
 
 # Resources
 
-| Title                        | Description                                                                                                |     Link      |
-| :--------------------------- | :--------------------------------------------------------------------------------------------------------- | :-----------: |
-| **Game Overview**            | The main markdown file.                                                                                    | [README.md]() |
-| **Game Development Details** | It contains information about game development.                                                            |  [DEV.md]()   |
-| **Project Setup**            | A tutorial on how to setup a Java project on Eclipse, and how to use GitHub to collaborate with the teams. | [SETUP.md]()  |
-| **Project Documentation**    | All class and methods implementation in details.                                                           |  [DOCS.md]()  |
+| Title                        | Description                                                                                                |                                              Link                                               |
+| :--------------------------- | :--------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------: |
+| **Game Overview**            | The main markdown file.                                                                                    |                   [README.md](https://github.com/reisenx/PROG-METH-I-PROJECT)                   |
+| **Game Development Details** | It contains information about game development.                                                            |   [DEV.md](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/Project%20Details/DEV.md)   |
+| **Project Setup**            | A tutorial on how to setup a Java project on Eclipse, and how to use GitHub to collaborate with the teams. | [SETUP.md](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/Project%20Details/SETUP.md) |
+| **Project Documentation**    | All class and methods implementation in details.                                                           |  [DOCS.md](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/Project%20Details/DOCS.md)  |
 
 ---
 
