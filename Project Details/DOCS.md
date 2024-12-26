@@ -282,13 +282,23 @@ This class focuses managing GUI. It manages page transition, game music, and som
 
 #### `GUIController.java` Fields
 
-| Variables | Description |
-| :-------- | :---------- |
+| Variables                               | Description                                                       |
+| :-------------------------------------- | :---------------------------------------------------------------- |
+| **<ins>- GUIController instance</ins>** | The `instance` that represents `GUIController` class.             |
+| **<ins>- MediaPlayer BGM</ins>**        | Background music player, using `GUIConfig.BGM` as URL of a music. |
 
 #### `GUIController.java` Methods
 
-| Methods | Description | More Details |
-| :------ | :---------- | :----------: |
+| Methods                                      | Description                                                                                                                                                           |   More Details   |
+| :------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------: |
+| **- GUIController()**                        | This constructor method does nothing, and set as private to ensure that this has been called once.                                                                    |        -         |
+| **<ins>+ GUIController getInstance()</ins>** | Getter method of `instance`. Create a new instance, if the instance is `null`. This implementation ensure that only one `instance` exists.                            |        -         |
+| **+ void playBGM()**                         | Plays background music in loop.                                                                                                                                       |        -         |
+| **+ void showHomePane()**                    | Initialize new `HomePane` then set `RootPane` to show it.                                                                                                             |        -         |
+| **+ void showStagePane()**                   | Initialize new `StagePane` then set `RootPane` to show it.                                                                                                            |        -         |
+| **+ void showHowToPlayPane()**               | Initialize new `HowToPlayPane` then set `RootPane` to show it.                                                                                                        |        -         |
+| **+ void showGamePane(int stage)**           | First, initialize new `GamePane`, `ControlPane`, and `HBox`. Second, add created `GamePane` then `ControlPane` to `HBox`. Finally, set `RootPane` to show the `HBox`. |        -         |
+| **+ void styleButton(Button button)**        | The method styles mostly all button in a game.                                                                                                                        | [More Details]() |
 
 ### [`GUIConfig.java`](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/MINDsweeper/src/control/GUIConfig)
 
@@ -296,13 +306,26 @@ This class contains all GUI configuration, such as application window size, and 
 
 #### `GUIConfig.java` Fields
 
-| Variables | Description |
-| :-------- | :---------- |
-
-#### `GUIConfig.java` Methods
-
-| Methods | Description | More Details |
-| :------ | :---------- | :----------: |
+| Variables                                    | Description                                                                     |
+| :------------------------------------------- | :------------------------------------------------------------------------------ |
+| **<ins>+ int APP_WIDTH</ins>**               | Application's window width = `1080 px`                                          |
+| **<ins>+ int APP_HEIGHT</ins>**              | Application's window height = `720 px`                                          |
+| **<ins>+ int GAME_WIDTH</ins>**              | `GamePane` width = `720 px`                                                     |
+| **<ins>+ int GAME_HEIGHT</ins>**             | `GamePane` height = `720 px`                                                    |
+| **<ins>+ int CONTROL_WIDTH</ins>**           | `ControlPane` width = `360 px`                                                  |
+| **<ins>+ int CONTROL_HEIGHT</ins>**          | `ControlPane` height = `720 px`                                                 |
+| **<ins>+ String ICON</ins>**                 | Game icon URL.                                                                  |
+| **<ins>+ String HOME_BG</ins>**              | `HomePane`'s background URL.                                                    |
+| **<ins>+ String STAGE_BG</ins>**             | `StagePane`'s background URL.                                                   |
+| **<ins>+ String HOW_TO_IMAGE</ins>**         | `HowToPlayPane`'s tutorial image URL.                                           |
+| **<ins>+ String CELL_COVER_IMAGE</ins>**     | `Cell`'s cover image URL.                                                       |
+| **<ins>+ String FLAG_COVER_IMAGE</ins>**     | `Cell`'s cover with flag image URL.                                             |
+| **<ins>+ String BGM</ins>**                  | Background music URL.                                                           |
+| **<ins>+ String[] SFX</ins>**                | Array of each `Cell` sound effect URL.                                          |
+| **<ins>+ String[] CELL_IMAGE</ins>**         | Array of `NormalCell` image URL.                                                |
+| **<ins>+ String[] SPECIAL_CELL_IMAGE</ins>** | Array of special `NormalCell` image URL.                                        |
+| **<ins>+ String BOMB_IMAGE</ins>**           | Array of `BombCell` image URL.                                                  |
+| **<ins>+ String SPECIAL_IMAGE</ins>**        | Array of `SpecialCell` (`MysteryCell`, `ShieldCell`, `DefuserCell`) images URL. |
 
 ---
 
@@ -314,43 +337,56 @@ This package contains all of the GUI component of every page in a game.
 
 This class construct home screen and its GUI components.
 
-#### `HomePane.java` Fields
-
-| Variables | Description |
-| :-------- | :---------- |
-
 #### `HomePane.java` Methods
 
-| Methods | Description | More Details |
-| :------ | :---------- | :----------: |
+| Methods                            | Description                                                                                                                                                                       | More Details |
+| :--------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------: |
+| **+ HomePane()**                   | Constructor method of `HomePane`. Set resolution using `APP_WIDTH` and `APP_HEIGHT` then call all method in this class to setup `HomePane` components.                            |      -       |
+| **- void setupBackground()**       | Create "MINDSWEEPER" title on `HomePane`. Use _Impact_ font with bold style and set font size 95 for "MIND" and size 55 for "Sweeper".                                            |      -       |
+| **- void createStartButton()**     | Create "Start" button on `HomePane` by using `styleButton()` to style the button. Set event on mouse clicked to navigate to stage 1 of a game by using `showGamePane(1)`.         |      -       |
+| **- void createStageSelectButton** | Create "Select Stage" button on `HomePane` by using `styleButton()` to style the button. Set event on mouse clicked to navigate to `StagePane` by using `showStagePane()`.        |      -       |
+| **- void createHowToPlayButton()** | Create "How to Play" button on `HomePane` by using `styleButton()` to style the button. Set event on mouse clicked to navigate to `HowToPlayPane` by using `showHowToPlayPane()`. |      -       |
+| **- void createExitButton()**      | Create "Exit" button on `HomePane` by using `styleButton()` to style the button. Set event on mouse clicked to close the application by using `System.exit(0)`.                   |      -       |
+
+> [!NOTE]
+> All methods mentioned in this class are in `GUIController.java`. Use `GUIController.getInstance()` to access the method. (For example, `GUIController.getInstance().showGamePane(1)`).
+> All configuration mentioned in this class are in `GUIConfig.java`. For example, use `GUIConfig.APP_WIDTH` to access the value.
 
 ### [`HowToPlayPane.java`](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/MINDsweeper/src/pane/HowToPlayPane.java)
 
 This class construct game tutorial screen and its GUI components.
 
-#### `HowToPlayPane.java` Fields
-
-| Variables | Description |
-| :-------- | :---------- |
-
 #### `HowToPlayPane.java` Methods
 
-| Methods | Description | More Details |
-| :------ | :---------- | :----------: |
+| Methods                       | Description                                                                                                                                                           | More Details |
+| :---------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------: |
+| **+ HowToPlayPane()**         | Constructor method of `HowToPlayPane`. Set resolution using `APP_WIDTH` and `APP_HEIGHT` then call all method in this class to setup `HowToPlayPane` components.      |      -       |
+| **- void setupHowToPlay()**   | Setup white background, and show tutorial image by using `GUIConfig.HOW_TO_IMAGE` as URL.                                                                             |      -       |
+| **- void createTitle()**      | Create "How to Play:" title on `HowToPlayPane` Use _Impact_ font with size 80, then add to column `0-2` and row `0`.                                                  |      -       |
+| **- void createBackButton()** | Create "Back" button on `HowToPlayPane` by using `styleButton()` to style the button. Set event on mouse clicked to navigate to `HomePane` by using `showHomePane()`. |      -       |
+
+> [!NOTE]
+> All methods mentioned in this class are in `GUIController.java`. Use `GUIController.getInstance()` to access the method. (For example, `GUIController.getInstance().showGamePane(1)`).
+> All configuration mentioned in this class are in `GUIConfig.java`. For example, use `GUIConfig.APP_WIDTH` to access the value.
 
 ### [`StagePane.java`](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/MINDsweeper/src/pane/StagePane.java)
 
 This class construct stage selection screen and its GUI components.
 
-#### `StagePane.java` Fields
-
-| Variables | Description |
-| :-------- | :---------- |
-
 #### `StagePane.java` Methods
 
-| Methods | Description | More Details |
-| :------ | :---------- | :----------: |
+| Methods                                                | Description                                                                                                                                                                                  | More Details |
+| :----------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------: |
+| **+ StagePane()**                                      | Constructor method of `StagePane`. Set resolution using `APP_WIDTH` and `APP_HEIGHT` then call all method in this class to setup `StagePane` components.                                     |      -       |
+| **- void setupBackground()**                           | Setup background by using `STAGE_BG` as URL.                                                                                                                                                 |      -       |
+| **- void createTitle()**                               | Create "Select Stage:" title on `StagePane` Use _Impact_ font with size 80, then add to column `0-2` and row `0`.                                                                            |      -       |
+| **- Button createStageButton(String text, int stage)** | Return a button with `text` that navigates to stage `stage` of a game and use `styleButton()` method to style the button. To navigate to stage `stage` of a game, use `showGamePane(stage)`. |      -       |
+| **- void createAllStageButton()**                      | Create all 9 stages button by calling `createStageButton()` inside a for loop to create them. For each stage `i` button, add it to column `(i - 1) mod 3` and row `1 + (i-1)/3`.             |      -       |
+| **- void createBackButton()**                          | Create "Back" button on `StagePane` by using `styleButton()` to style the button. Set event on mouse clicked to navigate to `HomePane` by using `showHomePane()`.                            |      -       |
+
+> [!NOTE]
+> All methods mentioned in this class are in `GUIController.java`. Use `GUIController.getInstance()` to access the method. (For example, `GUIController.getInstance().showGamePane(1)`).
+> All configuration mentioned in this class are in `GUIConfig.java`. For example, use `GUIConfig.APP_WIDTH` to access the value.
 
 ### [`GamePane.java`](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/MINDsweeper/src/pane/GamePane.java)
 
@@ -358,13 +394,38 @@ This class construct game board utilizing randomization method from `GameUtil.ja
 
 #### `GamePane.java` Fields
 
-| Variables | Description |
-| :-------- | :---------- |
+| Variables                                 | Description                                       |
+| :---------------------------------------- | :------------------------------------------------ |
+| **<ins>- int stage</ins>**                | Stage of the `GamePane`.                          |
+| **- int boardSize**                       | Grid size. (e.g. `9`, `16`, `25`)                 |
+| **- double cellSize**                     | `Cell` size in pixels.                            |
+| **- int cellsAmount**                     | `Cell` amount in a board.                         |
+| **- int bombsAmount**                     | `BombCell` amount in a board.                     |
+| **- int mysteryAmount**                   | `MysteryCell` amount in a board.                  |
+| **- int shieldAmount**                    | `ShieldCell` amount in a board.                   |
+| **- int defuserAmount**                   | `DefuserCell` amount in a board.                  |
+| **- ArrayList<ArrayList<Cell>>** allCells | 2-dimensional ArrayList of all `Cell` in a board. |
+| **- ArrayList<Cell> allBombCells**        | ArrayList of all `BombCell` in a board.           |
 
 #### `GamePane.java` Methods
 
-| Methods | Description | More Details |
-| :------ | :---------- | :----------: |
+| Methods                                             | Description | More Details |
+| :-------------------------------------------------- | :---------- | :----------: |
+| **+ GamePane(int stage)**                           |             |              |
+| **- void constructBoard()**                         |             |              |
+| **+ void resetBoard()**                             |             |              |
+| **- void replaceSpeicialCell(Cell cell, int type)** |             |              |
+| **+ ArrayList<ArrayList<Cell>> getAllCells()**      |             |              |
+| **+ ArrayList<Cell> getAllBombCells()**             |             |              |
+| **+ int getBoardSize()**                            |             |              |
+| **+ double getCellSize()**                          |             |              |
+| **+ int getCellsAmount()**                          |             |              |
+| **+ int getBombsAmount()**                          |             |              |
+| **+ int getMysteryAmount()**                        |             |              |
+| **+ int getShieldAmount()**                         |             |              |
+| **+ int getDefuserAmount()**                        |             |              |
+| **<ins>+ int getStage()</ins>**                     |             |              |
+| **<ins>+ void setStage(int stage)</ins>**           |             |              |
 
 ### [`ControlPane.java`](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/MINDsweeper/src/pane/ControlPane.java)
 
