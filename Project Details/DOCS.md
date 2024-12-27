@@ -409,23 +409,23 @@ This class construct game board utilizing randomization method from `GameUtil.ja
 
 #### `GamePane.java` Methods
 
-| Methods                                             | Description | More Details |
-| :-------------------------------------------------- | :---------- | :----------: |
-| **+ GamePane(int stage)**                           |             |              |
-| **- void constructBoard()**                         |             |              |
-| **+ void resetBoard()**                             |             |              |
-| **- void replaceSpeicialCell(Cell cell, int type)** |             |              |
-| **+ ArrayList<ArrayList<Cell>> getAllCells()**      |             |              |
-| **+ ArrayList<Cell> getAllBombCells()**             |             |              |
-| **+ int getBoardSize()**                            |             |              |
-| **+ double getCellSize()**                          |             |              |
-| **+ int getCellsAmount()**                          |             |              |
-| **+ int getBombsAmount()**                          |             |              |
-| **+ int getMysteryAmount()**                        |             |              |
-| **+ int getShieldAmount()**                         |             |              |
-| **+ int getDefuserAmount()**                        |             |              |
-| **<ins>+ int getStage()</ins>**                     |             |              |
-| **<ins>+ void setStage(int stage)</ins>**           |             |              |
+| Methods                                             | Description                                                                                                                                          |   More Details   |
+| :-------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------: |
+| **+ GamePane(int stage)**                           | Constructor method of `GamePane`. Initialize all fields by using configuration in `GameConfig` and set resolution to `GAME_WIDTH` and `GAME_HEIGHT`. |        -         |
+| **- void constructBoard()**                         | Construct board by randomly placing `Cell`. The amount of each type depends on the stage configuration.                                              | [More Details]() |
+| **+ void resetBoard()**                             | Deletes all `Cell`, then reconstruct a new board.                                                                                                    |        -         |
+| **- void replaceSpeicialCell(Cell cell, int type)** | Replaces current `NormalCell` with `SpecialCell`. (type `0` is `MysteryCell`, type `1` is `ShieldCell`, and type `2` is `DefuserCell`)               | [More Details]() |
+| **+ ArrayList<ArrayList<Cell>> getAllCells()**      | Getter method of `allCells`.                                                                                                                         |        -         |
+| **+ ArrayList<Cell> getAllBombCells()**             | Getter method of `allBombCells`.                                                                                                                     |        -         |
+| **+ int getBoardSize()**                            | Getter method of `boardSize`.                                                                                                                        |        -         |
+| **+ double getCellSize()**                          | Getter method of `cellSize`.                                                                                                                         |        -         |
+| **+ int getCellsAmount()**                          | Getter method of `cellsAmount`.                                                                                                                      |        -         |
+| **+ int getBombsAmount()**                          | Getter method of `bombsAmount`.                                                                                                                      |        -         |
+| **+ int getMysteryAmount()**                        | Getter method of `mysteryAmount`.                                                                                                                    |        -         |
+| **+ int getShieldAmount()**                         | Getter method of `shieldAmount`.                                                                                                                     |        -         |
+| **+ int getDefuserAmount()**                        | Getter method of `defuserAmount`.                                                                                                                    |        -         |
+| **<ins>+ int getStage()</ins>**                     | Getter method of `stage`.                                                                                                                            |        -         |
+| **<ins>+ void setStage(int stage)</ins>**           | Setter method of `stage`.                                                                                                                            |        -         |
 
 ### [`ControlPane.java`](https://github.com/reisenx/PROG-METH-I-PROJECT/blob/main/MINDsweeper/src/pane/ControlPane.java)
 
@@ -433,12 +433,56 @@ This class construct game control screen showing at the right side of `GamePane.
 
 #### `ControlPane.java` Fields
 
-| Variables | Description |
-| :-------- | :---------- |
+| Variables                    | Description                                                           |
+| :--------------------------- | :-------------------------------------------------------------------- |
+| **- Text stageText**         | The text that shows stage of a game.                                  |
+| **- Text gameText**          | The text that shows game state.                                       |
+| **- Text timerText**         | The text that shows timer.                                            |
+| **- Text flagText**          | The text that shows flag remaining.                                   |
+| **- Text cellText**          | The text that shows cell clicked.                                     |
+| **- Text shieldText**        | The text that shows shield amount.                                    |
+| **- Button startButton**     | Game start button.                                                    |
+| **- Button restartButton**   | Restart button.                                                       |
+| **- Button nextStageButton** | Next stage button.                                                    |
+| **- Button backButton**      | Back to home screen button.                                           |
+| **- VBox contentBox**        | A container that contains all GUI components.                         |
+| **- int time**               | Current time on timer. (Default = `0`)                                |
+| **- Timeline timer**         | JavaFX timer component. It is better to use this instead of a thread. |
 
 #### `ControlPane.java` Methods
 
-| Methods | Description | More Details |
-| :------ | :---------- | :----------: |
+| Methods                            | Description                                                                                                                                                                                                                      | More Details |
+| :--------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------: |
+| **+ ControlPane()**                | Constructor method. Constructor method of `ControlPane`. Set resolution using `CONTROL_WIDTH` and `CONTROL_HEIGHT` then call all method in this class to setup `ControlPane` components, then add `contentBox` to `ControlPane`. |              |
+| **- void createStageText()**       | Create a text "Stage: `stage`" by using _Trebuchet MS_ font with size 48, then add to `contentBox`.                                                                                                                              |              |
+| **- void createGameText()**        | Create a text "Prepare yourself!" by using _Trebuchet MS_ font with size 36, then add to `contentBox`.                                                                                                                           |              |
+| **- void createTimerText()**       | Create a text "Time: 0" by using _Trebuchet MS_ font with size 24, then add to `contentBox`.                                                                                                                                     |              |
+| **- void createFlagText()**        | Create a text "Remaining Flags x `INITIAL_FLAG`" by using _Trebuchet MS_ font with size 24, then add to `contentBox`. (`INITIAL_FLAG` is equal to `GameConfig.BOMBS`)                                                            |              |
+| **- void createCellText()**        | Create a text "Cell clicked x 0" by using _Trebuchet MS_ font with size 24, then add to `contentBox`.                                                                                                                            |              |
+| **- void createShieldText()**      | Create a text "Shield x 0" by using _Trebuchet MS_ font with size 24, then add to `contentBox`.                                                                                                                                  |              |
+| **- void createStartButton()**     | Create "Start Game" button on `ControlPane` by using `styleButton()` to style the button. Set event on mouse clicked to `startButtonHandler()`, then add to `contentBox`.                                                        |              |
+| **- void createRestartButton()**   | Create "Restart" button on `ControlPane` by using `styleButton()` to style the button. Set event on mouse clicked to `restartButtonHandler()`, then add to `contentBox`.                                                         |              |
+| **- void createNextStageButton()** | Create "Next Stage" button on `ControlPane` by using `styleButton()` to style the button. Set event on mouse clicked to navigate to next stage by using `showGamePane(stage + 1)`, then add to `contentBox`.                     |              |
+| **- void createBackButton()**      | Create "Back" button on `ControlPane` by using `styleButton()` to style the button. Set event on mouse clicked to navigate to `HomePane` by using `showHomePane()`, then add to `contentBox`.                                    |              |
+| **- void startButtonHandler()**    | Start a game by using `newGame()` in `GameController`, disable start button, enable restart button, and start a timer.                                                                                                           |              |
+| **- void restartButtonHandler()**  | Restart a game by using `restartGame()` in `GameController`, enable start button, disable restart button, and stop then reset a timer.                                                                                           |              |
+| **- void updateTimerText()**       | Update `timerText` in `ControlPane` every second by using `Platform.runlater()` to properly update JavaFX GUI component.                                                                                                         |              |
+| **+ void updateFlagText()**        | Update `flagText` in `ControlPane`.                                                                                                                                                                                              |              |
+| **+ void updateCellText()**        | Update `cellText` in `ControlPane`.                                                                                                                                                                                              |              |
+| **+ void updateShieldText()**      | Update `shieldText` in `ControlPane`.                                                                                                                                                                                            |              |
+| **+ void startTimer()**            | Start timer to count from `0`.                                                                                                                                                                                                   |              |
+| **+ void resetTimer()**            | Set timer to `0`.                                                                                                                                                                                                                |              |
+| **+ void stopTimer()**             | Stop a timer.                                                                                                                                                                                                                    |              |
+| **+ Text getStageText()**          | Getter method of `stageText`.                                                                                                                                                                                                    |              |
+| **+ Text getGameText()**           | Getter method of `gameText`.                                                                                                                                                                                                     |              |
+| **+ Text getFlagText()**           | Getter method of `flagText`.                                                                                                                                                                                                     |              |
+| **+ Text getCellText()**           | Getter method of `cellText`.                                                                                                                                                                                                     |              |
+| **+ Text getShieldText()**         | Getter method of `shieldText`.                                                                                                                                                                                                   |              |
+| **+ Button getNextStageButton()**  | Getter method of `nextStageButton`.                                                                                                                                                                                              |              |
+| **+ int getTime()**                | Getter method of `time`.                                                                                                                                                                                                         |              |
+
+> [!NOTE]
+> All methods mentioned in this class are in `GUIController.java`. Use `GUIController.getInstance()` to access the method. (For example, `GUIController.getInstance().showGamePane(1)`).
+> All configuration mentioned in this class are in `GUIConfig.java`. For example, use `GUIConfig.APP_WIDTH` to access the value.
 
 ---
